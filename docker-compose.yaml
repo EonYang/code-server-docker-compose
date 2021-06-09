@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  codeserver:
+    image: codercom/code-server
+    container_name: codeserver-yang
+    volumes:
+      - "$PWD/.config:/home/coder/.config"
+      - "$HOME/projects:/home/coder/projects"
+    ports:
+      - "8765:8080"
